@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name":         "Rola History",
+  "description":  "<%= pkg.description %>",
+  "version":      "<%= pkg.version %>",
+  "homepage_url": "http://sites.google.com/site/8th713lab/Home/chrome",
+  "icons": {
+    "128": "icons/128.png",
+    "48": "icons/48.png",
+    "16": "icons/16.png"
+  },
+  "chrome_url_overrides" : {
+    "history": "index.html"
+  },
+  "permissions": [
+    "chrome://favicon/",
+    "history",
+    "storage"
+  ]
+}

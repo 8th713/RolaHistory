@@ -1,0 +1,26 @@
+!!! 5
+html(ng-app="app", ng-csp="")
+  head
+    meta(charset='UTF-8')
+    title Rola History
+    link(rel='stylesheet', href='./css/bootstrap.min.css')
+    link(rel='stylesheet', href='./css/style.css')
+  body(ng-controller="AppCtrl", ng-class="{locked: locked}")
+    include includes/header
+    section.container(ng-view="")
+    .loading
+      ul.loading-anime
+        li
+        li
+        li
+
+    script(type="text/ng-template", id="/recent.html")
+      include templates/recent
+    script(type="text/ng-template", id="/date.html")
+      include templates/date
+    script(type="text/ng-template", id="/search.html")
+      include templates/search
+    script(type="text/ng-template", id="/option.html")
+      include templates/option
+    script(src='./js/lib.js')
+    script(src='./js/app.min.js')

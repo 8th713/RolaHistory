@@ -1,0 +1,22 @@
+header.view-header
+  h1 Option
+section.form-group
+  h2 Range of Recent
+  .btn-group
+    input.radio-btn.btn.btn-lg.btn-default(
+      type="radio"
+      name="recent"
+      data-label="{{ item | hour }}"
+      ng-repeat="item in ranges"
+      ng-model="config.range"
+      value="{{ item }}")
+section.form-group
+  h2 Split time of Date
+  .btn-group
+    input.radio-btn.btn.btn-lg.btn-default(
+      type="radio"
+      name="split"
+      data-label="{{ item | hour }}"
+      ng-repeat="item in splits"
+      ng-model="config.split"
+      value="{{ item }}")

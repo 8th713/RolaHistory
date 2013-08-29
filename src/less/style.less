@@ -1,0 +1,138 @@
+body {
+  padding-top: 50px;
+  margin-bottom: 10em;
+}
+
+.locked {
+  pointer-events: none;
+}
+
+.count {
+  margin-left: 1em;
+  vertical-align: middle;
+}
+
+.delete-btn {
+  margin-left: 1em;
+}
+
+.item {
+  margin: 0 0 10px;
+}
+
+.item-header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 1em;
+}
+
+.item-date {
+  margin-right: 1em;
+}
+
+.item-link {
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  margin-right: 20px;
+}
+
+input.radio-btn {
+  -webkit-appearance: none;
+  min-width: 80px;
+  margin: 0;
+  padding: 10px 16px;
+  line-height: 1.33;
+  border-radius: 6px;
+
+  &:checked {
+    background-image: none;
+    color: #ffffff;
+    background-color: #3276b1;
+    border-color: #285e8e;
+    outline: 0;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+
+  &:after {
+    content: attr(data-label);
+  }
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1130;
+  display: none;
+  background-color: fade(#fff, 70%);
+
+  .locked & {
+    display: block;
+  }
+}
+
+.loading-anime {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 50px;
+  margin-left: -75px;
+  margin-top: -25px;
+  padding: 0;
+  font-size: 0;
+
+
+  li {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 50%;
+    -webkit-animation: load .6s linear infinite alternate;
+            animation: load .6s linear infinite alternate;
+
+    &:nth-child(1) {
+      -webkit-animation-delay: -.4s;
+              animation-delay: -.4s;
+    }
+
+    &:nth-child(2) {
+      -webkit-animation-delay: -.2s;
+              animation-delay: -.2s;
+    }
+  }
+}
+
+@-webkit-keyframes load {
+  0% {
+    background-color: fade(#00f, 50%);
+  }
+  100% {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    background-color: fade(#00f, 20%);
+  }
+}
+@keyframes load {
+  0% {
+    background-color: fade(#00f, 50%);
+  }
+  100% {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    background-color: fade(#00f, 20%);
+  }
+}
+
+@media (min-width: 768px) {
+  .separator {
+    display: inline-block;
+    width: 4px;
+  }
+}

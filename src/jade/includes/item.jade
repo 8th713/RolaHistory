@@ -1,0 +1,24 @@
+.checkbox-inline.pull-left
+  input(
+    type="checkbox"
+    ng-model="item.checked"
+    ng-change="change()")
+.btn-group.pull-left
+  button.btn.btn-default.btn-xs.dropdown-toggle(type="button", data-toggle="dropdown")
+    span.caret
+  ul.dropdown-menu
+    li
+      a(href="", ng-click="setText(item.origin) || search()")
+        span.glyphicon.glyphicon-search
+        |  Search {{ item.origin }}
+    li
+      a(href="", ng-click="delItem()")
+        span.glyphicon.glyphicon-trash
+        |  Delete
+.item-header
+  span.item-date.text-muted(title="{{item.lastVisitTime | date:'yyyy/MM/dd HH:mm'}}")
+    | {{item.lastVisitTime | date:dateFormat}}
+  a.item-link(
+    ng-href="{{ item.url }}",
+    ng-style="{backgroundImage: 'url(\"chrome://favicon/' + item.url + '\")'}")
+    | {{ item.title || item.url }}

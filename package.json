@@ -1,0 +1,20 @@
+{
+  "name": "rola-history",
+  "version": "0.0.1",
+  "description": "Rola history.",
+  "author": "8th713",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "homepage": "https://sites.google.com/site/8th713lab/Home/chrome",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-jade": "~0.8.0",
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-clean": "~0.5.0"
+  }
+}

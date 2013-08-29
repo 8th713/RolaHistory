@@ -1,0 +1,15 @@
+header
+  h1 {{ title | date:'yyyy/MM/dd' }}
+    span.badge.count {{ getCount() }}
+    button.delete-btn.btn.btn-danger(
+      ng-disabled="isDisabled()"
+      ng-click="deleteSelected()")
+      span.glyphicon.glyphicon-trash
+      |  Delete Selected
+section(
+  ng-repeat="unit in units"
+  ng-show="unit.items.length")
+  h2 {{ unit.startTime | date:'HH:mm'}} - {{ unit.endTime | date:'HH:mm'}}
+    span.badge.count {{ unit.items.length }}
+  .item(ng-repeat="item in unit.items")
+    include ../includes/item

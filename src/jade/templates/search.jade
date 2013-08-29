@@ -1,0 +1,10 @@
+header
+  h1 {{ title }}
+    span.badge.count {{ items.length }}
+    button.delete-btn.btn.btn-danger(
+      ng-disabled="isDisabled()"
+      ng-click="deleteSelected()")
+      span.glyphicon.glyphicon-trash
+      |  Delete Selected
+div.item(ng-repeat="item in items")
+  include ../includes/item

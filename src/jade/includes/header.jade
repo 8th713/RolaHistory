@@ -1,0 +1,49 @@
+haeder.navbar.navbar-fixed-top.navbar-default
+  .navbar-header
+    button.navbar-toggle(data-toggle="collapse", data-target=".navbar-collapse")
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    a.navbar-brand(href="#") RolaHistory
+  .collapse.navbar-collapse
+    .navbar-form.navbar-left
+      form.form-group(ng-submit="search()")
+        input.form-control(
+          type="search"
+          ng-model="searchText"
+          placeholder="Search")
+      span.separator
+      .form-group
+        input.form-control(
+          type="date"
+          ng-model="dateText"
+          ng-change="changeDate()")
+    ul.nav.navbar-nav
+      li.dropdown
+        a.dropdown-toggle(href="", data-toggle="dropdown")
+          span.glyphicon.glyphicon-time
+          |  Recent
+          b.caret
+        ul.dropdown-menu(ng-controller="RecentMenuCtrl as rm")
+          li(active="/")
+            a(ng-href="#/") {{ config.range | hour }}
+          li(ng-repeat="d in rm.date", active="/date/{{d.date}}")
+            a(ng-href="#/date/{{d.date}}") {{d.title}}
+    ul.nav.navbar-nav.navbar-right
+      li.dropdown
+        a.dropdown-toggle(href="", data-toggle="dropdown")
+          span.glyphicon.glyphicon-trash
+          |  Delete
+          b.caret
+        ul.dropdown-menu(ng-controller="DeleteCtrl")
+          li
+            a(href="", ng-click="delRange(28, $event)") 4 weeks
+          li
+            a(href="", ng-click="delRange(7, $event)") 7 days
+          li
+            a(href="", ng-click="delRange(1, $event)") 24 hours
+          li
+            a(href="", ng-click="delRange(0, $event)") all
+      li
+        a.glyphicon.glyphicon-wrench(href="#/option")
