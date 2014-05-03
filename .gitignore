@@ -1,6 +1,6 @@
 Thumbs.db
 .DS_Store
 
+components
 dist
 node_modules
-*.pem
