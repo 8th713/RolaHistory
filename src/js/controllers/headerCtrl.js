@@ -29,7 +29,7 @@ angular.module('app.controllers.HeaderCtrl', [])
   scope.delRange = function (range, evt) {
     evt.preventDefault();
     evt.stopPropagation();
-    $(evt.target.parentNode).dropdown('toggle');
+    // $(evt.target.parentNode).dropdown('toggle');
 
     var endTime = evt.timeStamp - (range * 24 * 60 * 60 * 1000);
     var endText = format(endTime, 'yyyy/MM/dd HH:mm:ss');

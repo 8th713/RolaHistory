@@ -1,10 +1,15 @@
-!!! 5
+doctype html
 html(ng-app="app", ng-csp="")
   head
     meta(charset='UTF-8')
     title Rola History
-    link(rel='stylesheet', href='./css/bootstrap.min.css')
-    link(rel='stylesheet', href='./css/style.css')
+    link(rel='stylesheet', href='./bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='./angular/angular-csp.css')
+    link(rel='stylesheet', href='./style.css')
+    script(src='./angular/angular.js')
+    script(src='./angular-route/angular-route.js')
+    script(src='./angular-animate/angular-animate.js')
+    script(src='./app.js')
   body(ng-controller="AppCtrl", ng-class="{locked: locked}")
     include includes/header
     section.container(ng-view="")
@@ -22,5 +27,3 @@ html(ng-app="app", ng-csp="")
       include templates/search
     script(type="text/ng-template", id="/option.html")
       include templates/option
-    script(src='./js/lib.js')
-    script(src='./js/app.min.js')

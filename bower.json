@@ -1,0 +1,24 @@
+{
+  "name": "rola-history",
+  "dependencies": {
+    "angular": "~1.2.16",
+    "angular-route": "~1.2.16",
+    "angular-animate": "~1.2.16",
+    "bootstrap": "~3.1.1"
+  },
+  "overrides": {
+    "angular": {
+      "main": [
+        "./angular.js",
+        "./angular-csp.css"
+      ]
+    },
+    "bootstrap": {
+      "dependencies": null,
+      "main": [
+        "./dist/css/bootstrap.css",
+        "./dist/fonts/glyphicons-halflings-regular.woff"
+      ]
+    }
+  }
+}

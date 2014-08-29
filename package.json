@@ -1,20 +1,27 @@
 {
   "name": "rola-history",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Rola history.",
-  "author": "8th713",
-  "license": "MIT",
+  "author": "8th713 <8th713@gmail.com> (https://github.com/8th713/)",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/8th713/RolaHistory/blob/master/LICENSE"
+    }
+  ],
   "readmeFilename": "README.md",
-  "homepage": "https://sites.google.com/site/8th713lab/Home/chrome",
-  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/8th713/RolaHistory.git"
+  },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-jade": "~0.8.0",
-    "grunt-contrib-less": "~0.7.0",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-clean": "~0.5.0"
+    "gulp": "^3.6.2",
+    "gulp-bower-files": "^0.2.2",
+    "gulp-clean": "^0.2.4",
+    "gulp-concat": "^2.2.0",
+    "gulp-jade": "^0.5.0",
+    "gulp-less": "^1.2.3",
+    "gulp-template": "^0.1.1",
+    "run-sequence": "^0.3.6"
   }
 }

@@ -4,3 +4,5 @@ Thumbs.db
 components
 dist
 node_modules
+
+*.pem
